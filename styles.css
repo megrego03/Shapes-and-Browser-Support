@@ -51,6 +51,12 @@ table{
     width:100%;
     border-collapse:collapse;
 }
+
+.table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
 th,td{
     padding:.75rem;
     border:1px solid var(--border);
@@ -60,4 +66,23 @@ th,td{
 
 .rounded-treatment {
     border-radius: 1rem;
+}
+
+@supports (clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%)) {
+    .clipped-treatment img {
+        clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+    }
+}
+
+@media (min-width: 48rem) {
+    .portrait {
+        float: left;
+    }
+
+    @supports (shape-outside: circle(50%)) and (shape-margin: 1rem) {
+        .portrait {
+            shape-outside: circle(50%);
+            shape-margin: 1rem;
+        }
+    }
 }
