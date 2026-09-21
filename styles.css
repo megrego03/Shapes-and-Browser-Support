@@ -57,3 +57,7 @@ th,td{
     text-align:left;
 }
 /* TODO: add rounded baseline, @supports clip-path enhancement, and an appropriate-width shape-outside float. */
+
+.rounded-treatment {
+    border-radius: 1rem;
+}
